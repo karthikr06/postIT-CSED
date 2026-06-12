@@ -2,7 +2,8 @@ import './home.module.css'
 
 function homePage(){
     return(<>
-        //home Page Content
+        {/* Home Page Content */}
+        home
     </>
     )
 }   

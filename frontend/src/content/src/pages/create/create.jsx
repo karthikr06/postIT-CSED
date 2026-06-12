@@ -2,7 +2,8 @@ import './create.module.css'
 
 function createPage(){
     return(<>
-        //Create Page Content
+        {/* Create Page Content */}
+        create
     </>
     )
 }   

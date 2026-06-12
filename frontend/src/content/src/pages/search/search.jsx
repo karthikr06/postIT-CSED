@@ -2,7 +2,8 @@ import './search.module.css'
 
 function searchPage(){
     return(<>
-        //Search Page Content
+        {/* Search Page Content */}
+        search page
     </>
     )
 }   
