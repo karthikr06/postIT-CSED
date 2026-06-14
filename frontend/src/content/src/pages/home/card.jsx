@@ -1,3 +1,5 @@
+import "./home.css"
+
 function card(props){
     let title = props.title
     let desc = props.description
@@ -6,15 +8,15 @@ function card(props){
     if((props.title).length > 20){
         title = (props.title).substring(0, 20) + "..."
     }
-    if((props.description).length > 50){
-        desc = (props.description).substring(0, 50) + "..."
+    if((props.description).length > 70){
+        desc = (props.description).substring(0, 70) + "..."
     }
     if((props.tags).length > 2){
         tag = props.tags.filter((tag, index) => index < 2)
         tag = tag.join(", ") + "..."
     }
 
-    return(<div className="card">
+    return(<div className="card" onClick={props.onClick}>
         <img />
         <h4>{title}</h4>
         <p>{desc}</p>

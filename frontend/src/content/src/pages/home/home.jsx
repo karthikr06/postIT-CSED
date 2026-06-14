@@ -1,7 +1,8 @@
 import'./home.css'
 import Gap from '../../gap.jsx'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Card from './card.jsx'
+import Popup from './popup.jsx'
 
 const quotes = ["Knowledge is power. — Francis Bacon", "The only true wisdom is in knowing you know nothing. — Socrates", "Real knowledge is to know the extent of one's ignorance. — Confucius", "The investment in knowledge pays the best interest. — Benjamin Franklin", "An investment in knowledge always pays the best interest. — Benjamin Franklin"];
 
@@ -57,6 +58,18 @@ function homePage(){
   },
 ];
 
+    const [isOpen, setIsOpen] = useState(false);
+    const [selectedResource, setSelectedResource] = useState(null);
+
+    const openPopup = (resource) => {
+        setSelectedResource(resource);
+        setIsOpen(true);
+    }
+
+    const closePopup = () => {
+        setSelectedResource(null);
+        setIsOpen(false);
+    }
 
     return(<>
         <Gap />
@@ -69,9 +82,10 @@ function homePage(){
         </div>
         <div className="card-container">
             {STUDY_RESOURCES.map((resource) => (
-                <Card key={resource.id} {...resource} />
+                <Card key={resource.id} {...resource} onClick={() => openPopup(resource)} />
             ))}
         </div>
+        <Popup isOpen={isOpen} onClose={closePopup} resource={selectedResource} />
     </>
     )
 }   
