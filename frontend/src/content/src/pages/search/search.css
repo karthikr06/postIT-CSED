@@ -20,3 +20,15 @@
     box-shadow: 0 1px 2px black;
     background-color: var(--thirdary);
 }
+
+.search-results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background-color: var(--bg);
+}
+
+.icon{
+    font-size: 6rem;
+}
