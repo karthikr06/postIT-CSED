@@ -24,8 +24,10 @@
     align-items: center;
     width: 225px;
     margin: 20px;
-    background-color: var(--bg);
+    background-color: var(--secondary);
     border-radius: 15px;
+    box-shadow: 0 2px 8px black;
+
 
     &:hover{
         box-shadow: 0 2px 4px var(--accent);
@@ -73,11 +75,12 @@
 }
 
 .tag-badge {
-  background-color: var(--secondary);
+  background-color: var(--thirdary);
   padding: 1px 10px;
   border-radius: 4px;
   font-size: 12px;
   color: var(--text);
+  box-shadow: 0 1px 1px black;
 }
 
 .overlay{
@@ -94,10 +97,10 @@
 }
 
 .content{
-    background-color: var(--bg);
+    background-color: var(--secondary);
     padding: 30px;
     border-radius: 15px;
-    border: 3px solid var(--secondary);
+    border: 3px solid var(--tertiary);
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -105,8 +108,8 @@
 
 .close-btn{
     cursor: pointer;
-    background-color: var(--bg);
-    border: 2px solid var(--secondary);
+    background-color: var(--secondary);
+    border: 2px solid var(--tertiary);
     border-radius: 5px;
     font-size: 20px;
     display: flex;
@@ -117,4 +120,8 @@
         box-shadow: 0 0 4px var(--accent);
         transform: scale(1.05);
     }
+}
+
+.home-page{
+    background-color: var(--bg);
 }

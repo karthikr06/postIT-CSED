@@ -71,7 +71,7 @@ function homePage(){
         setIsOpen(false);
     }
 
-    return(<>
+    return(<div className="home-page">
         <Gap />
         {/* Home Page Content */}
         <div className="quote-container">
@@ -86,7 +86,7 @@ function homePage(){
             ))}
         </div>
         <Popup isOpen={isOpen} onClose={closePopup} resource={selectedResource} />
-    </>
+    </div>
     )
 }   
 
