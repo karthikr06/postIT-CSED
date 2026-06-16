@@ -23,51 +23,6 @@ function HomePage(){
           })
     }, []);
 
-    const STUDY_RESOURCES = [
-  {
-    id: 1,
-    title: "React Hooks Cheat Sheet",
-    description: "A quick-reference PDF covering useState, useEffect, and custom hooks usage.",
-    tags: ["React", "JavaScript", "Frontend", "PDF"]
-  },
-  {
-    id: 2,
-    title: "Cracking the Coding Interview Tips",
-    description: "A high-quality YouTube video breaking down algorithmic problem-solving patterns.",
-    tags: ["Interview Prep", "Algorithms", "YouTube", "Coding"]
-  },
-  {
-    id: 3,
-    title: "Intro to Machine Learning Notes",
-    description: "Comprehensive lecture slides covering linear regression and basic neural network structures.",
-    tags: ["AI", "Machine Learning", "Data Science", "Slides"]
-  },
-  {
-    id: 4,
-    title: "CSS Flexbox & Grid Guide",
-    description: "An interactive code file containing visual blueprints for responsive layout design.",
-    tags: ["CSS", "Web Design", "Frontend", "Code"]
-  },
-  {
-    id: 5,
-    title: "Data Structures Crash Course",
-    description: "A 20-minute video playlist reviewing linked lists, binary trees, and graphs.",
-    tags: ["Computer Science", "Data Structures", "YouTube"]
-  },
-  {
-    id: 6,
-    title: "SQL Query Optimization PDF",
-    description: "Advanced guide on indexes, execution plans, and speeding up database queries.",
-    tags: ["Databases", "SQL", "Backend", "PDF"]
-  },
-  {
-    id: 7,
-    title: "Git & GitHub Workflow Basics",
-    description: "A printable markdown file detailing branch management, merging, and pull requests.",
-    tags: ["Git", "DevOps", "Version Control", "Markdown"]
-  },
-];
-
     const [isOpen, setIsOpen] = useState(false);
     const [selectedResource, setSelectedResource] = useState(null);
 
@@ -91,7 +46,7 @@ function HomePage(){
             This is a global platform for sharing PDFs, files, and YouTube study links with students worldwide. Each shared resource features a clear title and description to guide learners instantly. It breaks down geographical barriers to make quality study materials accessible to anyone, anywhere.
         </div>
         <div className="card-container">
-            {STUDY_RESOURCES.map((resource) => (
+            {posts.map((resource) => (
                 <Card key={resource._id} {...resource} onClick={() => openPopup(resource)} />
             ))}
         </div>
