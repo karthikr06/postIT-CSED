@@ -9,10 +9,22 @@ const quotes = ["Knowledge is power. — Francis Bacon", "The only true wisdom i
 
 
 function homePage(){
+    const [posts, setPosts] = useState([]);
+
     useEffect(() => {
         document.title = "Home"
+        fetch('http://localhost:5000/api/posts')
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then((data) => {
+            setPosts(data); 
+          })
     }, []);
-
+/*
     const STUDY_RESOURCES = [
   {
     id: 1,
@@ -56,7 +68,9 @@ function homePage(){
     description: "A printable markdown file detailing branch management, merging, and pull requests.",
     tags: ["Git", "DevOps", "Version Control", "Markdown"]
   },
-];
+]; */
+
+
 
     const [isOpen, setIsOpen] = useState(false);
     const [selectedResource, setSelectedResource] = useState(null);
@@ -81,7 +95,7 @@ function homePage(){
             This is a global platform for sharing PDFs, files, and YouTube study links with students worldwide. Each shared resource features a clear title and description to guide learners instantly. It breaks down geographical barriers to make quality study materials accessible to anyone, anywhere.
         </div>
         <div className="card-container">
-            {STUDY_RESOURCES.map((resource) => (
+            {posts.map((resource) => (
                 <Card key={resource.id} {...resource} onClick={() => openPopup(resource)} />
             ))}
         </div>

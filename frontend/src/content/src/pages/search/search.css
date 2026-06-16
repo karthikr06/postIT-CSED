@@ -7,6 +7,7 @@
 .search-container{
     margin-top: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -23,12 +24,28 @@
 
 .search-results{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
     min-height: 70vh;
     background-color: var(--bg);
+    flex-wrap: wrap;
 }
 
 .icon{
     font-size: 6rem;
+}
+
+.noresults{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.error{
+    font-size: 3.5rem;
+    min-width: 100vw;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
