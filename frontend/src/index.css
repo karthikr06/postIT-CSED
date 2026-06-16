@@ -1,0 +1,21 @@
+:root {
+  --bg: #121212;        
+  --secondary: #1e1e1e; 
+  --thirdary: #2d2d2d;  
+  --tertiary: #333333;   
+  --text: #ffffff;     
+  --accent: #bb86fc;    
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
