@@ -14,6 +14,7 @@ function Popup({ isOpen, onClose, resource }) {
         
         <h2>{resource.title}</h2>
         <p>{resource.description}</p>
+        <h4>Link: </h4>
         
         <div className="tags-container">
           {resource.tags.map((tag, index) => (

@@ -23,6 +23,7 @@
     flex-direction: column;
     align-items: center;
     width: 225px;
+    height: 250px;
     margin: 20px;
     background-color: var(--secondary);
     border-radius: 15px;
@@ -35,13 +36,6 @@
         transition: all 0.3s ease;
         cursor: pointer;
     }
-}
-
-.card img{
-    margin-top: 10px;
-    width: 150px;
-    height: 150px;
-    border-radius: 15px;
 }
 
 .card h4{
