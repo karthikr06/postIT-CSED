@@ -4,6 +4,7 @@ import '../App.css';
 function NavBar({className}) {
     return(<nav id='navBar' className={className}>
         <ul>
+            <li  className='logo'><div>POST <a>IT</a></div></li>
             <li><div className="nav-link"><Link to="/"><FaHouse />Home</Link></div></li>
             <li><div className="nav-link"><Link to="/create"><FaPlus />Create</Link></div></li>
             <li><div className="nav-link"><Link to="/search"><FaMagnifyingGlass />Search</Link></div></li>
