@@ -1,0 +1,69 @@
+
+.create-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg);
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+.create-post h1 {
+    margin-bottom: 30px;
+    color: var(--text);
+}
+
+.create-post form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    max-width: 90vw;
+}
+
+.create-post label {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.create-post input, 
+.create-post textarea, 
+.create-post select {
+    background-color: var(--thirdary);
+    color: var(--text);
+    border: 1px solid var(--tertiary);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.create-post input:focus, 
+.create-post textarea:focus, 
+.create-post select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 5px var(--accent);
+}
+
+.create-post button {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.create-post button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px var(--accent);
+}
