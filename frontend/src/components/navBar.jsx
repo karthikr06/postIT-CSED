@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { FaHouse, FaMagnifyingGlass, FaPlus } from 'react-icons/fa6';
-import './navBar.css';
+import '../App.css';
 function NavBar({className}) {
     return(<nav id='navBar' className={className}>
         <ul>

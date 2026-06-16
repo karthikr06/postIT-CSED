@@ -1,0 +1,72 @@
+/*use bg, secondary, thirdary, text variables from index.css */
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app{
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+}
+
+#navBar {
+    position: fixed;   
+    top: 0;            
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: top 0.5s ease-in-out;
+}
+
+
+#navBar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 15px;
+    list-style-type: none;
+    background-color: var(--secondary);
+    padding: 15px;
+    left: 0;
+    top: 0;
+    color: var(--text);
+    margin: 0;
+    box-shadow: 0 2px 4px black;
+
+}
+
+#navBar li .nav-link{
+    font-size: 18px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px black;
+}
+
+#navBar li .nav-link a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#navBar li .nav-link:hover{
+    background-color: var(--thirdary);
+    cursor: pointer;
+    box-shadow: 0 0 8px var(--accent);
+}
+
+#navBar.active {
+    top: 0;
+}
+
+#navBar.hidden {
+    top: -100px; 
+}
